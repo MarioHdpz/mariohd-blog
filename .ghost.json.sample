@@ -1,0 +1,11 @@
+/* Sample to build .ghost.json file */
+{
+  "development": {
+    "apiUrl": "http://blog.mariohd.com",
+    "contentApiKey": "<api-key>"
+  },
+  "production": {
+    "apiUrl": "http://blog.mariohd.com",
+    "contentApiKey": "<api-key>"
+  }
+}
