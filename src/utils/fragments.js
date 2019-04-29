@@ -49,7 +49,13 @@ export const ghostPostFields = graphql`
         slug
         featured
         feature_image
-        localImage { publicURL }
+        localImage { 
+            childImageSharp {
+                fluid(maxWidth: 326, maxHeight: 206) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+         }
         excerpt
         custom_excerpt
 

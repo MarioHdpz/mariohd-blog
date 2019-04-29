@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
+import Img from "gatsby-image"
 
 const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
 
+    console.info(post.localImage)
+
     return (
         <Link to={url} className="post-card">
             <header className="post-card-header">
-                {post.localImage &&
-                    <div className="post-card-image" style={{
-                        backgroundImage: `url(${post.localImage.publicURL})` ,
-                    }}></div>}
+                <Img fluid={post.localImage.childImageSharp.fluid} />
                 {post.tags && <div className="post-card-tags"> <Tags post={post} visibility="public" autolink={false} /></div>}
                 {post.featured && <span>Featured</span>}
                 <h2 className="post-card-title">{post.title}</h2>
