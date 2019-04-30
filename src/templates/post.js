@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
@@ -24,9 +25,9 @@ const Post = ({ data, location }) => {
                 <Layout>
                     <div className="container">
                         <article className="content">
-                            { post.localImage.publicURL ?
+                            { post.localImage ?
                                 <figure className="post-feature-image">
-                                    <img src={ post.localImage.publicURL } alt={ post.title } />
+                                    <Img fluid={post.localImage.childImageSharp.fluid} alt={ post.title } />
                                 </figure> : null }
                             <section className="post-full-content">
                                 <h1 className="content-title">{post.title}</h1>

@@ -544,7 +544,7 @@ h6 {
 
 .post-full-content {
     max-width: 720px;
-    margin: 0 auto;
+    margin: 3vh auto;
     background: #fff;
 }
 
@@ -813,7 +813,7 @@ h6 {
     line-height: 1.55em;
 }
 
-.post-card-image {
+.post-card-header div:first-child {
     margin: 0 0 10px 0;
     width: auto;
     height: 200px;

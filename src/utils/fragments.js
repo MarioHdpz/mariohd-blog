@@ -51,11 +51,11 @@ export const ghostPostFields = graphql`
         feature_image
         localImage { 
             childImageSharp {
-                fluid(maxWidth: 326, maxHeight: 206) {
+                fluid(maxWidth: 1000, maxHeight: 500) {
                   ...GatsbyImageSharpFluid
                 }
-              }
-         }
+            }
+        }
         excerpt
         custom_excerpt
 
