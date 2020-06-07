@@ -1,17 +1,17 @@
 #!/bin/bash
 set -u
 
-GATSBY=`which gatsby`
+YARN=`which yarn`
 
 # Remote configuration
 USER="mario"
 HOST="mariohd.com"
 SSH_AUTH="$USER@$HOST"
-STATIC_PATH="/var/www/html"
+STATIC_PATH="/home/mario/static/mariohd"
 
 rm -rf .cache
 
-$GATSBY build
+$YARN build
 
 tar -czf build.tar.gz public/
 
