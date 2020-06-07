@@ -18,7 +18,7 @@ const generateItem = function generateItem(post) {
     }
     let imageUrl
 
-    if (post.localImage.publicURL) {
+    if (post.localImage && post.localImage.publicURL) {
         imageUrl = post.localImage.publicURL
 
         // Add a media content tag
